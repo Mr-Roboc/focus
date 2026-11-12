@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="Main.qml">Main.qml</file>
+        <file alias="Palette.qml">Palette.qml</file>
+        <file alias="Chip.qml">Chip.qml</file>
+        <file alias="Format.js">Format.js</file>
+        <file alias="PlannerView.qml">PlannerView.qml</file>
+        <file alias="SessionEditor.qml">SessionEditor.qml</file>
+        <file alias="AppPicker.qml">AppPicker.qml</file>
+        <file alias="ActiveSessionView.qml">ActiveSessionView.qml</file>
+        <file alias="ExitDialog.qml">ExitDialog.qml</file>
+        <file alias="HistoryDialog.qml">HistoryDialog.qml</file>
+        <file alias="HelpOverlay.qml">HelpOverlay.qml</file>
+        <file alias="i18n/en.json">i18n/en.json</file>
+    </qresource>
+</RCC>

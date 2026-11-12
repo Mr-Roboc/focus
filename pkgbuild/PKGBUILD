@@ -1,0 +1,24 @@
+pkgname=focus
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Scheduled focus sessions that only let your chosen apps run'
+arch=('x86_64' 'aarch64')
+license=('MIT')
+depends=('qt6-base' 'qt6-declarative' 'qt6-wayland' 'hyprland')
+makedepends=('gcc' 'make')
+source=()
+sha256sums=()
+
+build() {
+  cd "$startdir/.."
+  ./bin/build
+}
+
+package() {
+  cd "$startdir/.."
+  install -Dm755 build/focus "$pkgdir/usr/bin/focus"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 "$startdir/focus.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/focus.svg"
+  install -Dm644 "$startdir/focus.desktop" "$pkgdir/usr/share/applications/focus.desktop"
+  install -Dm644 "$startdir/focus.service" "$pkgdir/usr/lib/systemd/user/focus.service"
+}

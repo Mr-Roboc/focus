@@ -1,0 +1,5 @@
+{
+  "%n min": { "one": "%n min", "other": "%n min" },
+  "Pause %n min": { "one": "Pause %n min", "other": "Pause %n min" },
+  "Paused for %n min": { "one": "Paused for %n min", "other": "Paused for %n min" }
+}

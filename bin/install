@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+ROOT="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
+"$ROOT/bin/build"
+cd "$ROOT/pkgbuild"
+makepkg -fsi "$@"
+
+# The background service is what starts sessions on schedule and enforces
+# them, so turn it on (or restart it onto the new binary) for this user.
+systemctl --user daemon-reload
+systemctl --user enable focus.service >/dev/null 2>&1 || true
+systemctl --user restart focus.service
+echo "focus.service is $(systemctl --user is-active focus.service)"

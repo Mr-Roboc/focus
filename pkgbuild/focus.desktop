@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Focus
+Comment=Scheduled focus sessions that only let your chosen apps run
+Exec=focus
+Icon=focus
+Terminal=false
+Categories=Utility;
+Keywords=focus;pomodoro;deep work;block;distraction;schedule;
+StartupWMClass=focus
